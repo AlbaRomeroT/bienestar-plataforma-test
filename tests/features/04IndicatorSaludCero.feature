@@ -64,5 +64,5 @@
  
         Examples:
             | Email                        | Password        | Genero  |Estatura|Peso|
-            | daniel.valencia@yopmail.com | 2021pruebasatm  | Masculino|175|65|
+            | daniela.beltran@yopmail.com | 2021pruebasatm  | Femenino|155|58|
     

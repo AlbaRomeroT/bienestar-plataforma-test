@@ -12,8 +12,8 @@ const SELECTORS = {
     HOME_NUEVA_FUNCIONALIDAD: 'app-register-activity div div ion-grid.addGrid',
     BUTTON_REGISTRO_MANUAL: '#activities',
     BUTTON_DATOS_SUENIO: '#sleep',
-    BUTTON_REGISTRO_CORPORAL: '#body-val',
-    //BUTTON_REGISTRO_CORPORAL: '#body > app-root > ion-app > app-footer > ion-footer > ion-tabs > div > ion-router-outlet > app-activities > ion-content > div > div > app-register-activity > div > div > ion-grid.addGrid.md.hydrated > ion-row > ion-col:nth-child(3)',
+    BUTTON_REGISTRO_CORPORAL: '#body_val',
+ 
 };
 
 class RegistroManualActividadScreen extends AppScreen{

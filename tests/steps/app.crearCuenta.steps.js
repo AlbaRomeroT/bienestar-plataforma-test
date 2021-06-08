@@ -6,8 +6,7 @@ import Gestures from '../helpers/gestures';
 
 
 When(/^Dar clic opcion crear cuenta$/, () => {
-    console.log("Opcion crear cuenta");
-    
+    console.log("Opcion crear cuenta");   
     RegisterUserScreen.btn_crear_cuenta.click();
     browser.pause(1000)
     
@@ -34,7 +33,6 @@ When(/^Ingresa correo '(.+)' del usuario$/, (email) => {
 
 When(/^Ingresa password '(.+)' del usuario$/, (password) => {
     RegisterUserScreen.password.setValue(password);
-    browser.pause(1000)
     driver.hideKeyboard();
     RegisterUserScreen.conf_password.click();
 });
@@ -42,11 +40,9 @@ When(/^Ingresa password '(.+)' del usuario$/, (password) => {
 When(/^Confirma password '(.+)' del usuario$/, (confpassword) => {
     RegisterUserScreen.conf_password.setValue(confpassword);
     driver.hideKeyboard();
-    browser.pause(1000)
 })
 
 When(/^Acepta terminos '(.+)' y condiciones$/, (terminos) => {
-    browser.pause(1000)
     expect(RegisterUserScreen.check_terminos.isDisplayed()).to.equal(true)
     if(terminos === 'True')
     {
@@ -61,7 +57,6 @@ When(/^Da clic en el boton siguiente$/, () => {
 })
 
 When(/^validar mensaje usuario existente$/, () => {
-    browser.pause(1000)
     expect(RegisterUserScreen.errorEmailExiste.isDisplayed()).to.equal(true)
     if (RegisterUserScreen.errorEmailExiste.isDisplayed()) {
         console.log("Email existente")
@@ -75,7 +70,6 @@ When(/^validar mensaje usuario existente$/, () => {
 
 When(/^Ver informacion adicional$/, () => {
     console.log("Informacion Adicional");
-    browser.pause(1000)
     InfoAdicionalUserScreen.waitForIsShown(true);
  
 })

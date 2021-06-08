@@ -23,16 +23,10 @@ config.capabilities = [
             process.cwd(),
             './node_modules/appium/node_modules/appium-chromedriver/chromedriver/mac/',
         ),
-        /*'appium:deviceName': 'Pixel_3_XL_API_27',
-        'appium:platformVersion': '27',
-        'appium:avd': 'Pixel_3_XL_API_27',*/
-              
         'appium:deviceName': 'Pixel_3a_API_30_x86',
         'appium:platformVersion': '30',
         'appium:avd': 'Pixel_3a_API_30_x86',
         'appium:orientation': 'PORTRAIT',
-        // `automationName` will be mandatory, see
-        // https://github.com/appium/appium/releases/tag/v1.13.0
         'appium:automationName': 'UIAutomator2',
         // The path to the app
         /* 'appium:app': join(

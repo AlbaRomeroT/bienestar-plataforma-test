@@ -42,7 +42,7 @@ exports.config = {
         source: true,
         profile: [],
         strict: false,
-        tagExpression: '@validateMostrarIndiceSaludHome',
+        tagExpression: '@validateEliminarPropositoHomeBienestar',
         tagsInTitle: false,
         //tags: [''],
         timeout: 60000,

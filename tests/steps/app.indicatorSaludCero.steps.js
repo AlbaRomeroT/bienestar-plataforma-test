@@ -30,7 +30,7 @@ Then(/^Ver formulario para completar informacion$/, () => {
 When(/^Dar clic en genero$/, () => {
     expect(InfoMinimaSaludScreen.genero.isDisplayed()).to.equal(true);
     InfoMinimaSaludScreen.genero.click();
-    browser.pause(2000)
+ 
 });
 
 When(/^Selecciona el '(.+)' del usuario$/, (sexo) => {
@@ -62,6 +62,7 @@ When(/^Selecciona la fecha de nacimiento del usuario$/, () => {
     InfoMinimaSaludScreen.waitForIsShown(true);
     expect(InfoMinimaSaludScreen.fecha_nacimiento.isDisplayed(true))
     InfoMinimaSaludScreen.fecha_nacimiento.click();
+    browser.pause(3000)
     /* 
     browser.pause(3000)
     expect(InfoMinimaSaludScreen.diaNacimiento.isDisplayed(true))
@@ -294,7 +295,7 @@ Then(/^Clic en cancelar peso$/, () => {
 });
 
 Then(/^Clic Ver indice de salud$/, () => {
-    console.log(("Clic en ver indice de salud"))
+    console.log(("Clic ver indice de salud"))
     InfoMinimaSaludScreen.waitForIsShown(true);
     InfoMinimaSaludScreen.botonVerIndiceSalud.click();
     browser.pause(3000)

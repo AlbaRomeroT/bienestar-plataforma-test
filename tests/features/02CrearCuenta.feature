@@ -64,5 +64,5 @@ Feature: Crear cuenta Usuario
         
         Examples:
         | NombreUsuario| ApellidoUsuario| Email                        | Password        | ConfirmaPSW   | Terminos|TipoDocumento    |NumeroDocumento|InfComercial|
-        | Daniela|Beltran|daniela.beltran@yopmail.com|2021pruebasatm|2021pruebasatm|True|Cedula|49678565       |False       |
+        | Maria|Perez|maria.perez@yopmail.com|2021pruebasatm|2021pruebasatm|True|Cedula|40785777       |False       |
  

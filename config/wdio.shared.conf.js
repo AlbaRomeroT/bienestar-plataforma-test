@@ -1,4 +1,7 @@
 exports.config = {
+    server: 'hub-cloud.browserstack.com',
+    user: process.env.BROWSERSTACK_USERNAME || 'alba_987EuF',//'alba_AV6S8F',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'RynyChqXEFZ197umSAut',//'1KT7LVd4ibRrPAAjvAYu',
     // ====================
     // Runner and framework
     // Configuration
@@ -40,7 +43,7 @@ exports.config = {
         source: true,
         profile: [],
         strict: false,
-        tagExpression: '@Smoke',
+        tagExpression: '@validateRegistroCuenta',
         tagsInTitle: false,
         //tags: [''],
         timeout: 90000,
@@ -50,7 +53,13 @@ exports.config = {
     // ====================
     // Appium Configuration
     // ====================
-    services: ['appium'],
+    services: [
+
+        ['browserstack', {   
+        browserstackLocal: true    
+        }]
+        
+    ],
     appium: {
         // For options see
         // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service
@@ -62,10 +71,7 @@ exports.config = {
         },
         command: 'appium',
     },
-    hostname: '0.0.0.0',
-    path: '/wd/hub/',
-    port: 4723,
-
+ 
     // ====================
     // Some hooks
     // ====================

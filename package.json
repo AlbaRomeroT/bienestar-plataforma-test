@@ -15,6 +15,7 @@
     "android.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.android.rdc.app.conf.js",
     "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.js",
     "androidlocal.app": "./node_modules/.bin/wdio ./config/wdio.androidLocal.app.conf.js",
+    "android.appBS": "./node_modules/.bin/wdio ./config/wdio.android.app.confBS.js",
     "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.js",
     "ioslocal.app": "./node_modules/.bin/wdio ./config/wdio.iosLocal.app.conf.js",
     "ios.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.ios.rdc.app.conf.js"

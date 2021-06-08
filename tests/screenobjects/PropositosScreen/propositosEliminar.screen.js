@@ -3,16 +3,16 @@ import Gestures from '../../helpers/gestures'
 import { DEFAULT_TIMEOUT } from '../../constants/constants';
 
 const SELECTORS = {
-    HOME: 'strong.title-purpose',
-    TITLE: 'strong.title-purpose',
+    HOME: 'app-modal-confirm ion-content',
+    TITLE: 'app-modal-confirm ion-content ion-row ion-col ion-label',
     
     //BUTTONS
-    BUTTON_INGRESAR: 'app-purpose div > div ion-row',
-    
+    BUTTON_CONFIRMAR_ELIMINAR_REGISTRO: 'app-modal-confirm ion-button.btn-action',
+ 
 };
 
 
-class PropositosHomePrincipalScreen extends AppScreen {
+class PropositosEliminarScreen extends AppScreen {
 
     constructor() {
         super(SELECTORS.HOME);
@@ -29,11 +29,14 @@ class PropositosHomePrincipalScreen extends AppScreen {
         return $(SELECTORS.HOME).isDisplayed();
     }
 
-    get tituloPropositoHomeBienestar() {
+    get tituloModalConfirmacionEliminar() {
         return $(SELECTORS.TITLE);
     }
-    get botonIngresarOpcion() {
-        return $(SELECTORS.BUTTON_INGRESAR);
+    
+
+    get botonConfirmarElimnarProposito() {
+        return $(SELECTORS.BUTTON_CONFIRMAR_ELIMINAR_REGISTRO);
     }
+ 
 }
-export default new PropositosHomePrincipalScreen();
+export default new PropositosEliminarScreen();
