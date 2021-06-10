@@ -1,10 +1,10 @@
 [
   {
-    "description": "  In order process a order\n  As a developer\n  I want to make sure POST operations through REST API works fine",
+    "description": "  In order process a order\n  As a developer\n  I want to make GET request through REST API",
     "elements": [
       {
         "description": "",
-        "id": "tradein-transaction-service;start-a-tradein-transaction",
+        "id": "bienestar-login-services;start-a-tradein-transaction",
         "keyword": "Scenario",
         "line": 7,
         "name": "Start a TradeIn Transaction",
@@ -14,240 +14,83 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "A transaction event TRANSFER_OF_TITLE",
+            "name": "A transaction GET event with the path /stage/bienestar/dacadoo/healthindex",
             "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:25"
+              "location": "src/bienestar/steps/healthcare.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
-            "arguments": [
-              {
-                "content": "{\n    \"id\": 18933360,\n    \"source_type\": \"pos\",\n    \"country_code\": \"ES\",\n    \"status\": \"payment_fulfilled\",\n    \"vendor_id\": 3,\n    \"screening_site_id\": 47,\n    \"store_number\": \"R435\",\n    \"pos_receipt_number\": \"20210419R4355828209\",\n    \"legacy_pos_receipt_number\": \"R4355828209\",\n    \"quoted_at\": \"2021-04-19T08:27:44.922-07:00\",\n    \"issued_at\": \"2021-04-19T08:28:01.488-07:00\",\n    \"quoted_total_cents\": 37000,\n    \"current_total_cents\": 37000,\n    \"current_total_currency\": \"EUR\",\n    \"created_at\": \"2021-04-19T08:27:44.927-07:00\",\n    \"updated_at\": \"2021-04-19T08:28:01.489-07:00\",\n    \"payment_approved_at\": \"2021-04-19T08:28:01.489-07:00\"\n}",
-                "line": 10
-              }
-            ],
-            "keyword": "And ",
+            "arguments": [],
+            "keyword": "When ",
             "line": 9,
-            "name": "A quote below:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "{\n  \"id\": 18933401,\n  \"first_name\": \"POS\",\n  \"last_name\": \"Customer\",\n  \"address1\": \"10600 North Tantau Avenue\",\n  \"city\": \"Cupertino\",\n  \"state\": \"CA\",\n  \"postal_code\": \"95014\",\n  \"country\": \"US\",\n  \"phone\": \"4081234567\",\n  \"email\": \"poscustomer@noreply.com\",\n  \"created_at\": \"2021-04-19T08:27:44.923-07:00\",\n  \"updated_at\": \"2021-04-19T08:27:44.923-07:00\"\n}",
-                "line": 32
-              }
-            ],
-            "keyword": "And ",
-            "line": 31,
-            "name": "The customer for quote is:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "{\n  \"id\": 18933041,\n  \"external_reference_id\": \"18933360\",\n  \"quote_id\": 18933360,\n  \"product_id\": 107751,\n  \"global_id\": \"36e22e7c-ea4d-4ab4-8a4d-dbad8fc5d1c6\",\n  \"status\": \"payment_fulfilled\",\n  \"transfer_status\": \"initiated\",\n  \"quoted_at\": \"2021-04-19T08:27:44.876-07:00\",\n  \"issued_at\": \"2021-04-19T08:27:51.255-07:00\",\n  \"name\": \"iPhone 11\",\n  \"line_of_business\": \"iphone\",\n  \"serial_number\": \"C6KZV0KYN73M\",\n  \"imei\": \"356563104149627\",\n  \"mpn\": \"MWM82QL/A\",\n  \"quoted_value_cents\": 37000,\n  \"quoted_vendor_value_cents\": 37000,\n  \"quoted_value_currency\": \"EUR\",\n  \"quoted_tier\": 1,\n  \"current_value_cents\": 37000,\n  \"current_vendor_value_cents\": 37000,\n  \"current_value_currency\": \"EUR\",\n  \"current_tier\": 1,\n  \"payment_amount_cents\": 0,\n  \"payment_amount_currency\": \"EUR\",\n  \"find_my_device\": \"off\",\n  \"government_id_status\": \"not_submitted\",\n  \"trade_delivery_type\": \"trade_in_kit\",\n  \"transfer_external_reference_id\": \"18933360\",\n  \"transfer_acknowledged_at\": \"2021-04-19T08:27:51.253-07:00\"\n}",
-                "line": 49
-              }
-            ],
-            "keyword": "And ",
-            "line": 48,
-            "name": "The quote item #1 is:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "  [\n    \"3G864*/A\",\n    \"3G865*/A\",\n    \"3G866*/A\",\n    \"3G867*/A\",\n    \"3G868*/A\",\n    \"3G869*/A\",\n    \"3G882*/A\",\n    \"3G883*/A\",\n    \"3G884*/A\",\n    \"3G885*/A\"\n  ]",
-                "line": 83
-              }
-            ],
-            "keyword": "And ",
-            "line": 82,
-            "name": "Having the below model numbers for item #1:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "  [\n    {\n      \"id\": 4,\n      \"product_tag_type\": \"device_type\",\n      \"value\": \"Mobile Phone\",\n      \"slug\": \"device_type_mobile_phone\",\n      \"display_order\": 3,\n      \"max_price_cents\": 57000,\n      \"max_price_currency\": \"EUR\",\n      \"min_price_cents\": 57000,\n      \"min_price_currency\": \"EUR\"\n    }\n  ]",
-                "line": 98
-              }
-            ],
-            "keyword": "And ",
-            "line": 97,
-            "name": "Having the below product tags for item #1:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:67"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "  {\n      \"MPN\": \"MWM82QL/A\",\n      \"FMIP_LOCK\": \"false\",\n      \"FMIP_LOST\": \"false\",\n      \"DEVICE_VALIDATION\": \"SUCCESS\"\n  }",
-                "line": 114
-              }
-            ],
-            "keyword": "And ",
-            "line": 113,
-            "name": "Having the below custom attributes for item #1:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:62"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "[\n  {\n    \"id\": 478627,\n    \"text\": \"Does the device meet the following functional criteria - Device powers on and holds charge as expected. Device doesn't have any missing or third party parts.  Device doesn't have any liquid damage causing functional issues. All buttons are present and functional.\",\n    \"answers\": [\n      {\n        \"text\": \"Yes\",\n        \"value\": 1,\n        \"no_value\": false,\n        \"value_cents\": 0\n      }\n    ],\n    \"question_id\": 113,\n    \"question_type\": \"yes_no\"\n  }\n]",
-                "line": 123
-              }
-            ],
-            "keyword": "And ",
-            "line": 122,
-            "name": "Having the below product questions for item #1:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "[\n  {\n    \"question_id\": 478629,\n    \"answer_value\": 1\n  }\n]",
-                "line": 142
-              }
-            ],
-            "keyword": "And ",
-            "line": 141,
-            "name": "Having the below questions for item #1:",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:51"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 150,
-            "name": "I send POST request to /tradeIn",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:72"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 151,
             "name": "I receive a response",
             "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:78"
+              "location": "src/bienestar/steps/healthcare.js:79"
             },
             "result": {
               "status": "passed",
-              "duration": 335000000
+              "duration": 331000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 152,
+            "line": 10,
             "name": "I get response code 200",
             "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:82"
+              "location": "src/bienestar/steps/healthcare.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n    \"data\": {\n        \"score\": \"518\",\n        \"yesterday\": \"0\",\n        \"components\": {\n            \"lifestyle\": \"702\",\n            \"body\": \"549\",\n            \"feelings\": \"488\"\n        }\n    }\n}",
+                "line": 12
+              }
+            ],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I expect response should have a json like",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": " {\n    \"data\": {\n      \"score\":{\n        \"type\": \"string\"\n      },\n      \"yesterday\":{\n        \"type\": \"string\"\n      },\n      \"components\": {\n        \"lifestyle\":{\n          \"type\": \"string\"\n        },\n        \"body\":{\n          \"type\": \"string\"\n        },\n        \"feelings\":{\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"type\": \"object\"\n  } ",
+                "line": 26
+              }
+            ],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I expect response should have a json schema",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:91"
             },
             "result": {
               "status": "failed",
-              "duration": 28000000,
-              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 403 !== 200\n    + expected - actual\n\n    -403\n    +200\n\n    at Expect._validateStatus (/Users/juanmonroy/Desktop/Pactum/sequoia_test/node_modules/pactum/src/models/expect.js:92:14)\n    at Expect.validate (/Users/juanmonroy/Desktop/Pactum/sequoia_test/node_modules/pactum/src/models/expect.js:41:10)\n    at Have._validate (/Users/juanmonroy/Desktop/Pactum/sequoia_test/node_modules/pactum/src/exports/expect.js:104:26)\n    at Have.status (/Users/juanmonroy/Desktop/Pactum/sequoia_test/node_modules/pactum/src/exports/expect.js:14:10)\n    at World.<anonymous> (/Users/juanmonroy/Desktop/Pactum/sequoia_test/src/tradein/steps/tradeinTransaction.js:83:33)"
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": "{\n\"transfer_acknowledged_at\": \"2021-04-19T08:27:51.253-07:00\",\n\"transfer_external_reference_id\": \"18933360\"\n}",
-                "line": 154
-              }
-            ],
-            "keyword": "And ",
-            "line": 153,
-            "name": "I expect response should have a json like",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:86"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [
-              {
-                "content": " {\n    \"type\": \"object\",\n    \"properties\": {\n      \"transfer_acknowledged_at\":{\n        \"type\": \"string\"\n      },\n      \"transfer_external_reference_id\":{\n        \"type\": \"string\"\n      }\n    }\n  } ",
-                "line": 161
-              }
-            ],
-            "keyword": "And ",
-            "line": 160,
-            "name": "I expect response should have a json schema",
-            "match": {
-              "location": "src/tradein/steps/tradeinTransaction.js:90"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "duration": 10000000,
+              "error_message": "Error: Keyword not supported: \"data\" at #\n    at fail (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:181:13)\n    at enforce (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:183:44)\n    at visit (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:209:7)\n    at compileSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:1039:27)\n    at compile (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:1062:26)\n    at validator (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/index.js:11:26)\n    at Object.validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/plugins/json.schema.js:6:22)\n    at Expect._validateJsonSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/models/expect.js:224:26)\n    at Expect.validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/models/expect.js:50:10)\n    at Have._validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/exports/expect.js:104:26)\n    at Have.jsonSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/exports/expect.js:59:10)\n    at World.<anonymous> (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/src/bienestar/steps/healthcare.js:93:33)"
             }
           },
           {
@@ -261,22 +104,6 @@
         ],
         "tags": [
           {
-            "name": "@tradein-service",
-            "line": 1
-          },
-          {
-            "name": "@sequoia",
-            "line": 1
-          },
-          {
-            "name": "@api",
-            "line": 1
-          },
-          {
-            "name": "@happypath",
-            "line": 1
-          },
-          {
             "name": "@smoke",
             "line": 1
           }
@@ -284,32 +111,16 @@
         "type": "scenario"
       }
     ],
-    "id": "tradein-transaction-service",
+    "id": "bienestar-login-services",
     "line": 2,
     "keyword": "Feature",
-    "name": "TradeIn Transaction Service",
+    "name": "Bienestar login Services",
     "tags": [
-      {
-        "name": "@tradein-service",
-        "line": 1
-      },
-      {
-        "name": "@sequoia",
-        "line": 1
-      },
-      {
-        "name": "@api",
-        "line": 1
-      },
-      {
-        "name": "@happypath",
-        "line": 1
-      },
       {
         "name": "@smoke",
         "line": 1
       }
     ],
-    "uri": "src/tradein/features/tradeinTransaction.feature"
+    "uri": "src/bienestar/features/healthcare.feature"
   }
 ]

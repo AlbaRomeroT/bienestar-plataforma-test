@@ -4,7 +4,7 @@
   "description": "Sequoia project which contains the automation testing scenarios to ensure the quality of sequoia_aws project",
   "main": "index.js",
   "scripts": {
-    "test": "mkdir report; cucumber-js src/tradein/features -r src/tradein/steps -f summary -f json:report/cucumber_report.json",
+    "test": "mkdir report; cucumber-js src/bienestar/features -r src/bienestar/steps -f summary -f json:report/cucumber_report.json",
     "apikeys-output": "aws apigateway get-api-keys --include-values > apikeys-output.json",
     "stacks-output": "aws cloudformation describe-stacks > stacks-output.json"
   },

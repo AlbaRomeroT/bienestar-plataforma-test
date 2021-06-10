@@ -29,18 +29,18 @@ function getAPIKey() {
 function getServiceUrl() {
     const expectedStackName = env.AWS_APP_NAME + "-" + env.AWS_ENV + "-stack";
     if (env.SERVICE_URL) return env.SERVICE_URL;
-    // else if (env.STACKS_OUTPUT_ENABLED === "true") {
-    //     let stacksData = loadFromFile(tools.STACKS_OUTPUT_FILE);
-    //     if (stacksData) {
-    //         for (const stack of stacksData.Stacks) {
-    //             if (stack.StackName === expectedStackName) {
-    //                 for (const output of stack.Outputs) {
-    //                     if (output.OutputKey === "InvokeUrl") return output.OutputValue;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    else if (env.STACKS_OUTPUT_ENABLED === "true") {
+        let stacksData = loadFromFile(tools.STACKS_OUTPUT_FILE);
+        if (stacksData) {
+            for (const stack of stacksData.Stacks) {
+                if (stack.StackName === expectedStackName) {
+                    for (const output of stack.Outputs) {
+                        if (output.OutputKey === "InvokeUrl") return output.OutputValue;
+                    }
+                }
+            }
+        }
+    }
     throw new Error("Service URL is not configured. Be sure you have environment variables either SERVICE_URL or STACKS_OUTPUT_ENABLED");
 }
 
