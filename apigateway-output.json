@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "id": "gkdcxwo8dj",
+            "name": "bienestar-aut-auth",
+            "description": "Api bienestar",
+            "createdDate": "2021-06-11T22:58:33-05:00",
+            "apiKeySource": "HEADER",
+            "endpointConfiguration": {
+                "types": [
+                    "EDGE"
+                ]
+            }
+        }
+    ]
+}

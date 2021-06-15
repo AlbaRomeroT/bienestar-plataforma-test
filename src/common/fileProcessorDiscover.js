@@ -27,16 +27,14 @@ function getAPIKey() {
 }
 
 function getServiceUrl() {
-    const expectedStackName = env.AWS_APP_NAME + "-" + env.AWS_ENV + "-stack";
+    const expectedApigatewayName = env.AWS_APP_NAME + "-" + env.AWS_ENV + "-" +env.AWS_ENV2;
     if (env.SERVICE_URL) return env.SERVICE_URL;
-    else if (env.STACKS_OUTPUT_ENABLED === "true") {
-        let stacksData = loadFromFile(tools.STACKS_OUTPUT_FILE);
-        if (stacksData) {
-            for (const stack of stacksData.Stacks) {
-                if (stack.StackName === expectedStackName) {
-                    for (const output of stack.Outputs) {
-                        if (output.OutputKey === "InvokeUrl") return output.OutputValue;
-                    }
+    else if (env.APIGATEWAY_OUTPUT_ENABLED === "true") {
+        let apigatewayData = loadFromFile(tools.APIGATEGAY_OUTPUT_FILE);
+        if (apigatewayData) {
+            for (const api of apigatewayData.items) {
+                if (api.name === expectedApigatewayName) {
+                    return `https://${api.id}.execute-api.${tools.REGION}.amazonaws.com/${env.AWS_ENV}`
                 }
             }
         }
