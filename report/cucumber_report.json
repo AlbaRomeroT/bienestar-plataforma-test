@@ -1,13 +1,136 @@
 [
   {
+    "description": "  In order process a order\n  As a developer\n  I want to make GET request through REST API for the achievement´s service",
+    "elements": [
+      {
+        "description": "",
+        "id": "bienestar-login-services;start-a-achievements-transaction",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Start a achievements Transaction",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "A transaction GET event with the path /aut/bienestar/achievement/get-all-achieviements",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I receive a response",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1048000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I get response code 200",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n\"body\": {\n    \"data\": [\n        {\n            \"value\": 2,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276f/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276f\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276f\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 0,\n            \"valid\": true,\n            \"achievement\": \"healthscore_500\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276e/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276e\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276e\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 0,\n            \"valid\": true,\n            \"achievement\": \"healthscore_750\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 2,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276d/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276d\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276d\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 2,\n            \"valid\": true,\n            \"achievement\": \"healthscore_500\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276c/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276c\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276c\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 1,\n            \"valid\": true,\n            \"achievement\": \"healthscore_750\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 2,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276b/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276b\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276b\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 1,\n            \"valid\": true,\n            \"achievement\": \"healthscore_500\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276a/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c266276a\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c266276a\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 3,\n            \"valid\": true,\n            \"achievement\": \"healthscore_750\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662769/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662769\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662769\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 2,\n            \"valid\": true,\n            \"achievement\": \"healthscore_750\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 2,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662768/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662768\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662768\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 3,\n            \"valid\": true,\n            \"achievement\": \"healthscore_500\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T05:01:10Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662767/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662767\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662767\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 3,\n            \"valid\": true,\n            \"achievement\": \"bmi\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T00:40:51Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662766/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662766\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662766\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 2,\n            \"valid\": true,\n            \"achievement\": \"bmi\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T00:40:51Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662765/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662765\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662765\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 1,\n            \"valid\": true,\n            \"achievement\": \"bmi\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T00:40:51Z\"\n        },\n        {\n            \"value\": 0,\n            \"sharing\": {\n                \"public\": true,\n                \"user\": true,\n                \"group\": true,\n                \"subjects\": []\n            },\n            \"creator\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"links\": [\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662764/comments\",\n                    \"rel\": \"http://dacadoo.com/rels#comments\"\n                },\n                {\n                    \"href\": \"https://api.int.appsb.segurosbolivar.com/2/achievements/60b582132b16fb56c2662764\",\n                    \"rel\": \"self\"\n                }\n            ],\n            \"id\": \"60b582132b16fb56c2662764\",\n            \"kind\": \"achievement\",\n            \"expirationTime\": \"2021-06-01T14:41:35Z\",\n            \"tier\": 0,\n            \"valid\": true,\n            \"achievement\": \"bmi\",\n            \"subject\": {\n                \"links\": [\n                    {\n                        \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2\",\n                        \"rel\": \"self\"\n                    }\n                ],\n                \"id\": \"60b581f0209a92676d1cd1a2\",\n                \"kind\": \"user\"\n            },\n            \"modificationTime\": \"2021-06-01T00:40:51Z\"\n        }\n    ],\n    \"links\": [\n        {\n            \"href\": \"https://api.int.appsb.segurosbolivar.com/2/users/60b581f0209a92676d1cd1a2/achievements?limit=250&modifiedBefore=4001-01-01T00%3A00%3A00Z\",\n            \"rel\": \"self\"\n        }\n    ]\n},\n\"rawBody\": null,\n\"hasErrors\": false,\n\"errors\": []\n}",
+                "line": 12
+              }
+            ],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I expect response should have a json like",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"array\"\n    }\n  }\n}",
+                "line": 582
+              }
+            ],
+            "keyword": "And ",
+            "line": 581,
+            "name": "I expect response should have a json schema",
+            "match": {
+              "location": "src/bienestar/steps/healthcare.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "bienestar-login-services",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Bienestar login Services",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "src/bienestar/features/achieviements.feature"
+  },
+  {
     "description": "  In order process a order\n  As a developer\n  I want to make GET request through REST API",
     "elements": [
       {
         "description": "",
-        "id": "bienestar-login-services;start-a-tradein-transaction",
+        "id": "bienestar-login-services;start-a-healthcare-transaction",
         "keyword": "Scenario",
         "line": 7,
-        "name": "Start a TradeIn Transaction",
+        "name": "Start a healthcare Transaction",
         "steps": [
           {
             "keyword": "Before",
@@ -21,13 +144,13 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "A transaction GET event with the path /stage/bienestar/dacadoo/healthindex",
+            "name": "A transaction GET event with the path /aut/bienestar/healthindex",
             "match": {
-              "location": "src/bienestar/steps/healthcare.js:26"
+              "location": "src/bienestar/steps/healthcare.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
@@ -36,11 +159,11 @@
             "line": 9,
             "name": "I receive a response",
             "match": {
-              "location": "src/bienestar/steps/healthcare.js:79"
+              "location": "src/bienestar/steps/healthcare.js:81"
             },
             "result": {
               "status": "passed",
-              "duration": 331000000
+              "duration": 1014000000
             }
           },
           {
@@ -49,7 +172,7 @@
             "line": 10,
             "name": "I get response code 200",
             "match": {
-              "location": "src/bienestar/steps/healthcare.js:83"
+              "location": "src/bienestar/steps/healthcare.js:85"
             },
             "result": {
               "status": "passed",
@@ -59,7 +182,7 @@
           {
             "arguments": [
               {
-                "content": "{\n    \"data\": {\n        \"score\": \"518\",\n        \"yesterday\": \"0\",\n        \"components\": {\n            \"lifestyle\": \"702\",\n            \"body\": \"549\",\n            \"feelings\": \"488\"\n        }\n    }\n}",
+                "content": "\n{\n  \"body\":{\n    \"data\": {\n        \"score\": \"518\",\n        \"yesterday\": \"0\",\n        \"components\": {\n            \"lifestyle\": \"702\",\n            \"body\": \"549\",\n            \"feelings\": \"488\"\n        }\n    }\n  }\n}\n",
                 "line": 12
               }
             ],
@@ -67,30 +190,29 @@
             "line": 11,
             "name": "I expect response should have a json like",
             "match": {
-              "location": "src/bienestar/steps/healthcare.js:87"
+              "location": "src/bienestar/steps/healthcare.js:89"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
             "arguments": [
               {
-                "content": " {\n    \"data\": {\n      \"score\":{\n        \"type\": \"string\"\n      },\n      \"yesterday\":{\n        \"type\": \"string\"\n      },\n      \"components\": {\n        \"lifestyle\":{\n          \"type\": \"string\"\n        },\n        \"body\":{\n          \"type\": \"string\"\n        },\n        \"feelings\":{\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"type\": \"object\"\n  } ",
-                "line": 26
+                "content": "  {\n    \"type\": \"object\",\n    \"properties\": {\n      \"data\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"score\":{\n            \"type\": \"string\"\n          },\n          \"yesterday\":{\n            \"type\": \"string\"\n          },\n          \"components\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"lifestyle\":{\n                \"type\": \"string\"\n              },\n              \"body\":{\n                \"type\": \"string\"\n              },\n              \"feelings\":{\n                \"type\": \"string\"\n              }\n            }\n          }\n        }\n      }\n    }\n  } ",
+                "line": 30
               }
             ],
             "keyword": "And ",
-            "line": 25,
+            "line": 29,
             "name": "I expect response should have a json schema",
             "match": {
-              "location": "src/bienestar/steps/healthcare.js:91"
+              "location": "src/bienestar/steps/healthcare.js:93"
             },
             "result": {
-              "status": "failed",
-              "duration": 10000000,
-              "error_message": "Error: Keyword not supported: \"data\" at #\n    at fail (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:181:13)\n    at enforce (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:183:44)\n    at visit (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:209:7)\n    at compileSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:1039:27)\n    at compile (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/compile.js:1062:26)\n    at validator (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/@exodus/schemasafe/src/index.js:11:26)\n    at Object.validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/plugins/json.schema.js:6:22)\n    at Expect._validateJsonSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/models/expect.js:224:26)\n    at Expect.validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/models/expect.js:50:10)\n    at Have._validate (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/exports/expect.js:104:26)\n    at Have.jsonSchema (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/node_modules/pactum/src/exports/expect.js:59:10)\n    at World.<anonymous> (/Users/juanmonroy/Desktop/Pactum/automationBackendBienestar/bienestar-plataforma-test/src/bienestar/steps/healthcare.js:93:33)"
+              "status": "passed",
+              "duration": 3000000
             }
           },
           {
